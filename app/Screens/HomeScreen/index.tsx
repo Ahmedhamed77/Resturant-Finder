@@ -1,7 +1,9 @@
 import React from 'react';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+
 import {mapStyle} from './mapStyle';
 import {styles} from './style';
+
 export const HomeScreen = () => {
   return (
     <MapView
