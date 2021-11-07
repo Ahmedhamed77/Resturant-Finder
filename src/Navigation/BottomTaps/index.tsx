@@ -4,8 +4,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import {RootParameterScreensList, RootStackParamList} from '../Route/interface';
-import {HomeScreen} from '../../Screens/HomeScreen';
-import {SettingScreen} from '../../Screens/SettingScreen';
+
+import {HomeScreen, RestaurantsScreen, SettingScreen} from '../../screens';
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -22,6 +22,16 @@ export const HomeScreenTab = () => {
           headerTitleAlign: 'center',
           tabBarIcon: ({color, size}) => (
             <MaterialIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={RootParameterScreensList.restaurants}
+        component={RestaurantsScreen}
+        options={{
+          headerTitleAlign: 'center',
+          tabBarIcon: ({color, size}) => (
+            <MaterialIcons name="fastfood" color={color} size={size} />
           ),
         }}
       />

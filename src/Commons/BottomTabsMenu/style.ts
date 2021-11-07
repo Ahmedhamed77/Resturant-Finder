@@ -41,7 +41,6 @@ export default StyleSheet.create({
     elevation: 5,
   },
   MainBottomContainerContent: {
-    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#fff',
