@@ -1,6 +1,6 @@
 export type GetRestaurants = {
   Total_Restaurants: number;
-  Result: Restaurant;
+  Result: Restaurant[];
 };
 
 export type Restaurant = {

@@ -9,7 +9,7 @@ export interface UserLocation {
   verticalAccuracy?: number;
 }
 
-export interface Resturant {
+export interface Restaurant {
   id: number;
   name: string;
   resturantlatitude: number;
