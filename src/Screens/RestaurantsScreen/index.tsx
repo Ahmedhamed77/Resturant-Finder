@@ -28,21 +28,27 @@ export const RestaurantsScreen = () => {
   const renderItem: ListRenderItem<Restaurant> = ({item}) => {
     return (
       <TouchableOpacity style={styles.touchableOpacityContainer}>
-        <View style={styles.containerHeaderCard}>
-          <Image
-            source={{uri: item.image, width: 120, height: 120}}
-            borderRadius={8}
-          />
-          <MaterialIcons name="favorite" size={22} color={'red'} />
+        <View style={styles.imageContainer}>
+          <Image source={{uri: item.image}} style={styles.image} />
         </View>
-
-        <View style={styles.containerFooterCard}>
-          <Text style={styles.textCardStyle}>{item.restauranttype}</Text>
-          <Text style={styles.textCardStyle}>{item.businessname}</Text>
+        <View style={styles.contentContainer}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.titleStyle}> {item.businessname}</Text>
+          </View>
+          <View style={styles.descContainer}>
+            <Text style={styles.descStyle}>
+              Экоактивизм для начинающих: что могу сделать в своем городе
+            </Text>
+          </View>
+          <View style={styles.footerContainer}>
+            <Text style={styles.dateStyle}>12 сентября</Text>
+            <MaterialIcons name="favorite" size={22} color={'red'} />
+          </View>
         </View>
       </TouchableOpacity>
     );
   };
+
   if (loading) {
     return <ActivityIndicator style={styles.handlerContainer} />;
   }
