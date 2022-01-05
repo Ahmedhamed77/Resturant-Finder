@@ -4,8 +4,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import {RootParameterScreensList, RootStackParamList} from '../Route/interface';
-
-import {HomeScreen, RestaurantsScreen, SettingScreen} from '../../screens';
+import {HomeScreen, RestaurantsScreen, SettingScreen} from '../../Screens';
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
