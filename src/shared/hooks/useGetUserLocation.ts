@@ -2,7 +2,7 @@ import GetLocation from 'react-native-get-location';
 import {useState, useEffect} from 'react';
 import {Alert} from 'react-native';
 
-import {UserLocation} from '../Types';
+import {UserLocation} from '../types';
 
 export const useGetUserLocation = () => {
   const [location, setLocation] = useState<UserLocation>();

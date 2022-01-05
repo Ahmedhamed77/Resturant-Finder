@@ -1,14 +1,10 @@
 import React from 'react';
-import {Route} from './src/Navigation/Route';
-import {Provider} from 'react-redux';
-import {store} from './src/redux/store';
+
+import {TabNavigation} from './src/navigation';
+import {withProviders} from './src/shared';
 
 const App = () => {
-  return (
-    <Provider store={store}>
-      <Route />
-    </Provider>
-  );
+  return <TabNavigation />;
 };
 
-export default App;
+export default withProviders(App);

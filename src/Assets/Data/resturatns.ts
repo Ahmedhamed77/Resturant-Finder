@@ -1,4 +1,4 @@
-import {Resturant} from './../../Types/index';
+import {Resturant} from '../../shared/types/index';
 export const resturants: Resturant[] = [
   // -122.406417 37.785834
   {

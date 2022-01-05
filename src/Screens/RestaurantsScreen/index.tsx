@@ -14,8 +14,27 @@ import {getRestaurantsList} from '../../redux/resturant/action';
 import {RootState} from '../../redux/rootReducer';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {styles} from './style';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {
+  RestaurantsStackParams,
+  RestaurantsStackParamsParamList,
+} from '../../navigation/RestuarantStack/interface';
+import {RouteProp} from '@react-navigation/core';
 
-export const RestaurantsScreen = () => {
+interface RestaurantsScreenProps {
+  navigation: StackNavigationProp<
+    RestaurantsStackParamsParamList,
+    RestaurantsStackParams.Restaurants
+  >;
+  route: RouteProp<
+    RestaurantsStackParamsParamList,
+    RestaurantsStackParams.Restaurants
+  >;
+}
+
+export const RestaurantsScreen: React.FC<RestaurantsScreenProps> = ({
+  navigation,
+}) => {
   const dispatch = useDispatch();
   const {restaurants, error, loading} = useSelector(
     (state: RootState) => state.shops,
@@ -25,9 +44,15 @@ export const RestaurantsScreen = () => {
     dispatch(getRestaurantsList());
   }, [dispatch]);
 
+  const openDetailsScreen = () => {
+    navigation.navigate(RestaurantsStackParams.RestaurantDetails);
+  };
+
   const renderItem: ListRenderItem<Restaurant> = ({item}) => {
     return (
-      <TouchableOpacity style={styles.touchableOpacityContainer}>
+      <TouchableOpacity
+        style={styles.touchableOpacityContainer}
+        onPress={openDetailsScreen}>
         <View style={styles.imageContainer}>
           <Image source={{uri: item.image}} style={styles.image} />
         </View>

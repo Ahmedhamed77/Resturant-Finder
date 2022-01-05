@@ -1,3 +1,5 @@
+import {TabNavigationParams} from '../../navigation/TabNavigation/interface';
+
 export interface UserLocation {
   accuracy?: number;
   altitude: number;
@@ -15,3 +17,13 @@ export interface Restaurant {
   resturantlatitude: number;
   resturantlongitude: number;
 }
+
+export type Tabs = {
+  id: number;
+  component: () => JSX.Element;
+  name: TabNavigationParams;
+  options: {
+    title: string;
+    tabBarIcon: ({color}: {color: string}) => JSX.Element;
+  };
+};

@@ -1,10 +1,10 @@
 import React from 'react';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import {useGetUserLocation} from '../../Hooks/useGetUserLocation';
+import {useGetUserLocation} from '../../shared/hooks/useGetUserLocation';
 import {Text} from 'react-native';
 import {mapStyle} from './mapStyle';
 import {styles} from './style';
-import {resturants} from '../../Assets/Data/resturatns';
+import {resturants} from '../../assets/Data/resturatns';
 
 export const HomeScreen = () => {
   const {location, loading} = useGetUserLocation();
