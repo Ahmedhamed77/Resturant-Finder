@@ -12,10 +12,10 @@ export const BottomTabsMenu: React.FC<BottomTabsMenuProps> = ({}) => {
     <View style={styles.MainBottomContainer}>
       <View style={styles.MainBottomContainerContent}>
         <View style={styles.imageBackContain}>
-          <ImageBackground
-            source={require('../../assets/Images/backmenu.png')}
+          {/* <ImageBackground
+            // source={require('../../assets/Images/backmenu.png')}
             style={styles.imageBack}
-          />
+          /> */}
         </View>
 
         <View style={{flex: 1, alignSelf: 'center'}}>
